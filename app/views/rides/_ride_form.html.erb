@@ -1,0 +1,6 @@
+<%= form_tag create_ride_path, method: :post do %>
+  <%= hidden_field_tag "ride[attraction_id]", @attraction.id %>
+  <%= hidden_field_tag "ride[user_id]", current_user.id %>
+
+  <%= submit_tag "Go on this ride" %>
+<% end %>

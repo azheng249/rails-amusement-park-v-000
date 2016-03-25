@@ -23,3 +23,55 @@ body {
   padding-top: 70px;
   padding-bottom: 30px;
 }
+
+table {
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid black;
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+th {
+  font-size: 1.5em;
+}
+
+.info {
+  background: rgb(230, 230, 230);
+  border-radius: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+.info a {
+  margin: 1em;
+}
+
+#messages {
+  text-align: center;
+  border-radius: 1em;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+#messages .error {
+  background: rgba(255, 77, 112, 0.6);
+  border: rgb(255,77,112) .3em solid;
+  padding: 0.5em;
+  border-radius: 0.8em;
+}
+
+#messages .message {
+  background: rgba(112, 255, 77, 0.6);
+  border: rgb(112,255,77) .3em solid;
+  padding: 0.5em;
+  border-radius: 0.8em;
+}
+
+form label{
+  margin: 0% 5%;
+}
+
+

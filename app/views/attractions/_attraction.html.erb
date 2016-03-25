@@ -1,0 +1,39 @@
+<table>
+<tbody>
+  <!-- Attraction Name -->
+  <tr>
+    <td><strong>Name: </strong></td>
+    <td><%= link_to @attraction.name, attraction_path(@attraction) %></td>
+  </tr>
+
+  <!-- Total Riders -->
+  <tr>
+    <td><strong>Total Number Of Riders: </strong></td>
+    <td><%= @attraction.users.count %></td>
+  </tr>
+
+  <!-- Tickets Required to Ride-->
+  <tr>
+    <td><strong>Tickets Required: </strong></td>
+    <td><%= @attraction.tickets %></td>
+  </tr>
+
+  <!-- Minimum Height Required -->
+  <tr>
+    <td><strong>Height Requirement: </strong></td>
+    <td><%= @attraction.min_height %> inches</td>
+  </tr>
+
+  <!-- Nausea Rating - increases riders nausea by -->
+  <tr>
+    <td><strong>Nausea Rating: </strong></td>
+    <td><%= @attraction.nausea_rating %></td>
+  </tr>
+
+  <!-- Happiness Rating - increases riders happiness by -->
+  <tr>
+    <td><strong>Happiness Rating: </strong></td>
+    <td><%= @attraction.happiness_rating %></td>
+  </tr>
+</tbody>
+</table>

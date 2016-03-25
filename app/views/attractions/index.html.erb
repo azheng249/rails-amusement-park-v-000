@@ -1,0 +1,40 @@
+<div>
+  <h1>Our Amazing Attractions</h1>
+  <%= link_to "New Attraction", new_attraction_path %>
+  <hr>
+
+  <!-- Display attractions in table -->
+  <table id="attractions-table">
+
+    <!-- Table headers -->
+    <thead class="table-head">
+      <tr>
+        <th>Name</th>
+        <th>Tickets Needed</th>
+        <th>Minimum Height</th>
+        <th>Link</th>
+      </tr> 
+    </thead>
+
+    <!-- Shows attractions' names, ticket cost, minimum height requirement and a link to the attraction's page -->
+    <tbody>
+    <% @attractions.each do |attraction| %>
+      <tr>
+        <td><%= attraction.name %></td>
+        <td><%= attraction.tickets %></td>
+        <td><%= attraction.min_height %></td>
+
+        <!-- Change attraction link's display based on user admin status -->
+        <% if current_user.admin %>
+          <!-- Admin -->
+          <td><%= link_to "Show #{attraction.name}", attraction_path(attraction) %></td>
+        <% else %>
+          <!-- Guest at amusement park -->
+          <td><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    </tbody>
+
+  </table>
+</div>

@@ -1,0 +1,42 @@
+<% if @user.admin %>
+  <h3>ADMIN - <%= @user.name %></h3><hr>
+<% else %>
+  <h3>GUEST - <%= @user.name %></h3><hr>
+<% end %>
+
+<div class="row">
+  <!-- User info -->
+  <table class="col-xs-9">
+  <tbody>
+    <tr>
+      <td><strong>Name: </strong></td>
+      <td><p><%= @user.name %></p></td>
+    </tr>
+
+    <tr>
+      <td><strong>Tickets: </strong></td>
+      <td><p><%= @user.tickets %></p></td>
+    </tr>
+
+    <tr>
+      <td><strong>Mood: </strong></td>
+      <td><p><%= @user.mood %></p></td>
+    </tr>
+
+    <tr>
+      <td><strong>Height: </strong></td>
+      <td><p><%= @user.height %></p></td>
+    </tr>
+  </tbody>
+  </table> <!-- End of user info -->
+
+  <!-- Links -->
+  <div class="col-xs-3">
+    <% if @user == current_user %>
+      <%= link_to "Edit", edit_user_path(@user) %><br><br>
+    <% end %>
+
+    <%= link_to "See attractions", attractions_path %>
+  </div> <!-- End of links -->
+
+</div> <!-- end of row -->

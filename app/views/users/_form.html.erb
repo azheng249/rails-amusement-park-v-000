@@ -1,0 +1,21 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><hr>
+
+  <%= f.label :tickets %>
+  <%= f.number_field :tickets %><hr>
+
+  <%= f.label :nausea %>
+  <%= f.number_field :nausea %><hr>
+
+  <%= f.label :happiness %>
+  <%= f.number_field :happiness %><hr>
+
+  <%= f.label :height %>
+  <%= f.number_field :height %><hr>
+
+  <%= f.label :admin, "Amusement Park Owner" %>
+  <%= f.check_box :admin %><hr>
+
+  <%= f.submit %>  
+<% end %>

@@ -1,0 +1,11 @@
+<div class="info">
+  <h1>Welcome to the Amusement Park!</h1>
+  <hr>
+
+  <% if current_user %>
+    <%= link_to "Enjoy our wonderful attractions!", attractions_path %>
+  <% else %>
+    <%= link_to "Sign in", new_session_path %>
+    <%= link_to "Sign up", new_user_path %>
+  <% end %>
+</div>
